@@ -1,0 +1,21 @@
+version: '3.1'
+
+networks:
+    my_network:
+        driver: bridge
+
+services:
+    service-a:
+        build:
+            context: ./docker/service-a
+        image: library/python:3
+        restart: always
+        networks:
+            - my_network
+    service-b:
+        build:
+            context: ./docker/service-b
+        image: library/python:3
+        restart: always
+        networks:
+            - my_network
