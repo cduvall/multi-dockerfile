@@ -5,7 +5,8 @@ RUN pip install --upgrade pip
 
 RUN ls
 
-COPY service_a.py .
+COPY ./service-a/service_a.py .
+COPY ./common ./common/.
 
 RUN bash -c 'echo -e ************************************************************'
 RUN bash -c 'echo -e SERVICE A'

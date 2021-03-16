@@ -7,15 +7,15 @@ networks:
 services:
     service-a:
         build:
-            context: ./docker/service-a
-        image: library/python:3
+            context: ./docker
+            dockerfile: ./service-a/Dockerfile
         restart: always
         networks:
             - my_network
     service-b:
         build:
-            context: ./docker/service-b
-        image: library/python:3
+            context: ./docker
+            dockerfile: ./service-b/Dockerfile
         restart: always
         networks:
             - my_network
